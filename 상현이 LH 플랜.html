@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시현님 맞춤 주거 분석 - 나무위키</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', sans-serif;
+            line-height: 1.6;
+            color: #373a3c;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .wiki-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        /* Header Style */
+        .wiki-header {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .wiki-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .wiki-meta {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 5px;
+            text-align: right;
+        }
+        .btn-group {
+            float: right;
+        }
+        .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            background: linear-gradient(to bottom, #fff, #eee);
+            text-decoration: none;
+            color: #333;
+            border-radius: 3px;
+        }
+
+        /* TOC Style */
+        .toc-container {
+            display: inline-block;
+            border: 1px solid #ccc;
+            background-color: #fcfcfc;
+            padding: 10px 20px 10px 10px;
+            margin: 20px 0;
+            min-width: 200px;
+        }
+        .toc-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            font-size: 0.95em;
+        }
+        .toc-item {
+            margin-bottom: 4px;
+        }
+        .toc-link {
+            text-decoration: none;
+            color: #0275d8;
+        }
+        .toc-link:hover {
+            text-decoration: underline;
+        }
+        .toc-sub {
+            padding-left: 20px;
+        }
+
+        /* Content Style */
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #373a3c;
+        }
+        h2::before {
+            content: ''; 
+            display: inline-block; 
+            width: 8px; 
+            height: 8px; 
+            background-color: #00a495; 
+            margin-right: 8px; 
+            vertical-align: middle; 
+            transform: translateY(-2px);
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-left: 5px solid #00a495;
+            padding-left: 10px;
+        }
+        h4 {
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        p { margin-bottom: 15px; }
+        
+        ul { margin-bottom: 15px; padding-left: 25px; }
+        li { margin-bottom: 5px; }
+
+        strong {
+            color: #d63031; /* Wiki emphasis color */
+        }
+        
+        .wiki-link {
+            color: #0275d8;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .wiki-link:hover { text-decoration: underline; }
+
+        /* Table Style */
+        .wiki-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        .wiki-table th, .wiki-table td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+        }
+        .wiki-table th {
+            background-color: #00a495;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+        .wiki-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .center { text-align: center; }
+
+        /* Quote/Summary Box */
+        .summary-box {
+            border: 2px solid #00a495;
+            background-color: #eef9f8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .wiki-footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 0.8em;
+            color: #777;
+        }
+        
+        sup {
+            color: #0275d8;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wiki-container">
+    <!-- Header -->
+    <div class="wiki-header">
+        <div class="btn-group">
+            <a href="#" class="btn">편집</a>
+            <a href="#" class="btn">토론</a>
+            <a href="#" class="btn">역사</a>
+        </div>
+        <h1 class="wiki-title">시현님 맞춤 주거 분석</h1>
+        <div class="wiki-meta">최근 수정 시각: 2025-05-15 14:30:00</div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary-box">
+        <strong><span style="font-size: 1.1em;">요약 결론</span></strong><br><br>
+        <ul>
+            <li><strong>청년전세임대:</strong> 3순위는 거의 확실, 2순위는 자산(어머니 집)에 따라 가능성 높음, 1순위는 불가.</li>
+            <li><strong>행복주택:</strong> 소득·나이 충족. 단, 어머니 주택으로 인한 <strong>세대분리(무주택세대구성원)</strong> 전략이 필수.</li>
+            <li><strong>당첨 확률:</strong> 인천/경기권 기준 1회 청약당 약 <strong>5~20%</strong>. 여러 번 시도하는 전략 필요.</li>
+        </ul>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-container">
+        <div class="toc-title">목차</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#s1" class="toc-link">1. 개요</a></li>
+            <li class="toc-item"><a href="#s2" class="toc-link">2. LH 청년전세임대 분석</a></li>
+            <li class="toc-item toc-sub"><a href="#s2-1" class="toc-link">2.1. 순위별 기준 및 현황</a></li>
+            <li class="toc-item toc-sub"><a href="#s2-2" class="toc-link">2.2. 시현님 해당 가능성</a></li>
+            <li class="toc-item"><a href="#s3" class="toc-link">3. 행복주택 청년 계층 분석</a></li>
+            <li class="toc-item toc-sub"><a href="#s3-1" class="toc-link">3.1. 자격 요건 검증</a></li>
+            <li class="toc-item toc-sub"><a href="#s3-2" class="toc-link">3.2. 핵심 변수: 세대분리</a></li>
+            <li class="toc-item"><a href="#s4" class="toc-link">4. 신청 시기 및 전략</a></li>
+            <li class="toc-item"><a href="#s5" class="toc-link">5. 경쟁률 및 확률 분석</a></li>
+            <li class="toc-item"><a href="#s6" class="toc-link">6. 단계별 실전 플랜</a></li>
+            <li class="toc-item"><a href="#s7" class="toc-link">7. 같이 보기</a></li>
+        </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="s1">1. 개요</h2>
+    <p>
+        본 문서는 강림의 개인 정보(만 22세, 공익요원 소득 월 110만 원, 모친 유주택자 등)를 바탕으로 
+        <a href="#" class="wiki-link">한국토지주택공사</a>(LH)의 <strong>청년전세임대</strong> 및 <strong>행복주택</strong> 입주 가능성을 분석한 문서이다.
+        2025년 기준 제도를 적용하여 작성되었다.
+    </p>
+
+    <!-- Section 2 -->
+    <h2 id="s2">2. LH 청년전세임대 분석</h2>
+    <p>
+        자신이 전세 주택을 구해오면 LH가 집주인과 계약 후 재임대하는 제도. 순위에 따라 지원 한도와 조건이 다르다.
+    </p>
+
+    <h3 id="s2-1">2.1. 순위별 기준 및 현황</h3>
+    <table class="wiki-table">
+        <colgroup>
+            <col style="width: 15%;">
+            <col style="width: 50%;">
+            <col style="width: 35%;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>주요 자격 요건</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="center"><strong>1순위</strong></td>
+                <td>생계·주거·의료급여 수급 가구<br>보호대상 한부모가족<br>차상위계층 가구</td>
+                <td>사실상 취약계층 전용</td>
+            </tr>
+            <tr>
+                <td class="center"><strong>2순위</strong></td>
+                <td>본인 + 부모 소득 ≤ 도시근로자 100%<br><strong>본인 + 부모 자산</strong> ≤ 국민임대 자산기준<sup>[A]</sup></td>
+                <td>부모 자산이 핵심</td>
+            </tr>
+            <tr>
+                <td class="center"><strong>3순위</strong></td>
+                <td>본인 소득 ≤ 100%<br><strong>본인 자산</strong> ≤ 행복주택 청년 자산기준<sup>[B]</sup></td>
+                <td>부모 소득·자산 무관</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="font-size: 0.85em; color: #666;">
+        [A] 2025년 기준 총자산 3.37억 원, 자동차 3,708만 원 이하<br>
+        [B] 2025년 기준 총자산 2.54억 원, 자동차 3,708만 원 이하
+    </p>
+
+    <h3 id="s2-2">2.2. 시현님 해당 가능성</h3>
+    <ul>
+        <li><strong>1순위: 불가능 (99%)</strong><br>
+            수급자, 차상위, 한부모 증명서가 없다면 지원 불가. 공익요원 급여 소득이 있어 신규 지정도 어렵다.</li>
+        <li><strong>2순위: 가능성 높음 (조건부)</strong><br>
+            소득 조건은 무난히 통과(본인+모 합계가 기준치보다 훨씬 낮음).<br>
+            관건은 <strong>어머니 명의 주택 자산 가치</strong>이다. '집 시세 - 대출 + 기타 자산'이 <strong>3.37억 원 이하</strong>라면 2순위가 된다.</li>
+        <li><strong>3순위: 거의 확실</strong><br>
+            부모 자산을 보지 않고 본인만 심사하므로, 본인 자산이 2.54억 원 이하라면 무조건 통과다.</li>
+    </ul>
+
+    <!-- Section 3 -->
+    <h2 id="s3">3. 행복주택 청년 계층 분석</h2>
+    <p>
+        대학생, 청년, 신혼부부 등을 위해 직주근접이 가능한 곳에 짓는 공공임대주택.
+    </p>
+
+    <h3 id="s3-1">3.1. 자격 요건 검증</h3>
+    <p>
+        LH 행복주택 청년 계층의 기본 요건은 다음과 같다.
+    </p>
+    <ul>
+        <li><strong>나이:</strong> 만 19~39세 (만 22세이므로 <strong>충족</strong>)</li>
+        <li><strong>소득:</strong> 해당 세대 소득이 100% 이하 (월 110만 원이므로 <strong>여유 있게 충족</strong>)</li>
+        <li><strong>자산:</strong> 본인 총자산 2억 5,400만 원 이하 (<strong>충족</strong>)</li>
+    </ul>
+
+    <h3 id="s3-2">3.2. 핵심 변수: 세대분리</h3>
+    <div class="summary-box" style="background-color: #fff0f0; border-color: #d63031;">
+        <strong>⚠️ 주의: 무주택세대구성원 요건</strong><br>
+        현재 주민등록상 <strong>'어머니(유주택자) 세대'의 구성원</strong>으로 되어 있다면, 유주택 세대원으로 분류되어 <strong>탈락</strong>할 수 있다.
+    </div>
+    <p>
+        행복주택 청년 계층은 본인이 무주택자여야 하며, 소득 유무에 따라 '본인만 검증'할지 '세대 전체를 검증'할지 나뉜다. 하지만 가장 깔끔한 방법은 다음과 같다.
+    </p>
+    <ol>
+        <li>실거주할 주소(원룸 등)를 구한다.</li>
+        <li>해당 주소로 <strong>전입신고</strong>를 하여 어머니와 주민등록을 분리한다.</li>
+        <li>완벽한 <strong>1인 단독 세대주</strong>가 되어 신청한다.</li>
+    </ol>
+    <p>
+        위장전입은 불법이므로, 실제 인천/경기권 취업(복무) 준비 등 거주지 이전 사유와 함께 진행해야 안전하다.
+    </p>
+
+    <!-- Section 4 -->
+    <h2 id="s4">4. 신청 시기 및 전략</h2>
+    
+    <h3 id="s4-1">4.1. 청년전세임대</h3>
+    <ul>
+        <li><strong>2025년 현재:</strong> 1순위 수시모집만 진행 중 (지원 불가).</li>
+        <li><strong>전망:</strong> 2025년 하반기 혹은 2026년 상반기에 <strong>2·3순위 정기모집 공고</strong>가 뜰 가능성이 있으므로 LH 청약플러스 알림 설정이 필수다.</li>
+    </ul>
+
+    <h3 id="s4-2">4.2. 행복주택 (인천/경기)</h3>
+    <ul>
+        <li><strong>LH 행복주택:</strong> 분기별, 혹은 반기별로 정례 모집을 한다. (1년에 2~3회 기회 있음)</li>
+        <li><strong>GH(경기주택도시공사):</strong> 경기도 지역 행복주택 별도 모집. 상/하반기 및 수시 모집을 노려야 한다.</li>
+        <li><strong>전략:</strong> 특정 단지 하나만 노리는 게 아니라, 인천/경기권에 공고가 뜰 때마다 <strong>계속 넣어야 한다.</strong></li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="s5">5. 경쟁률 및 확률 분석</h2>
+    <p>
+        시현님은 별도의 가점(우선공급 대상자)이 없는 '일반공급' 대상자이므로 추첨 확률 싸움이다.
+    </p>
+    <table class="wiki-table center">
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>예상 경쟁률</th>
+                <th>1회 당첨 확률</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>수도권 비인기 지역</strong></td>
+                <td>3 ~ 5 : 1</td>
+                <td>약 20 ~ 30%</td>
+                <td>교통 불편 지역 등</td>
+            </tr>
+            <tr>
+                <td><strong>인천/경기 평균</strong></td>
+                <td><strong>5 ~ 20 : 1</strong></td>
+                <td><strong>5 ~ 20%</strong></td>
+                <td>가장 현실적인 구간</td>
+            </tr>
+            <tr>
+                <td><strong>역세권/신축 인기</strong></td>
+                <td>40 : 1 이상</td>
+                <td>2.5% 미만</td>
+                <td>운이 좋아야 함</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <strong>[확률론적 접근]</strong><br>
+        당첨 확률 20%인 곳에 4번 지원하면, 한 번이라도 붙을 확률은 약 <strong>59%</strong>까지 올라간다. 
+        즉, <strong>"꾸준함"</strong>이 가장 큰 무기다.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="s6">6. 단계별 실전 플랜</h2>
+    
+    <h3>단계 0: 현실 체크 (즉시 실행)</h3>
+    <ul>
+        <li>어머니 주택 자산 가치(공시가/실거래가 - 대출) 계산하기 → 2순위 가능 여부 판단.</li>
+        <li>주민등록 등본 확인 → 현재 세대주가 누구인지 파악.</li>
+    </ul>
+
+    <h3>단계 1: 자격 최적화 (이사 준비 시)</h3>
+    <ul>
+        <li>인천/경기 지역 실거주지 마련 후 <strong>전입신고 및 세대분리</strong>.</li>
+        <li>이것으로 행복주택(무주택세대) 및 청년전세임대(3순위 본인 기준) 요건 완성.</li>
+    </ul>
+
+    <h3>단계 2: 무한 청약 (향후 1~2년)</h3>
+    <ul>
+        <li><strong>LH 청약플러스</strong> 및 <strong>GH 주택청약센터</strong> 즐겨찾기.</li>
+        <li>'청년전세임대 2/3순위' 공고 알림 설정.</li>
+        <li>행복주택은 지역(인천 남동구, 부평구 / 경기 부천, 시흥 등) 가리지 않고 신청.</li>
+    </ul>
+
+    <h3>단계 3: 플랜 B (장기전)</h3>
+    <ul>
+        <li>공공임대가 계속 안 될 경우: <strong>중기청 전세 대출</strong> 또는 <strong>청년 버팀목 대출</strong>(민간 은행 상품) + <strong>청년월세지원</strong> 활용을 기본 베이스로 둔다.</li>
+    </ul>
+
+    <!-- Section 7 -->
+    <h2 id="s7">7. 같이 보기</h2>
+    <ul>
+        <li><a href="#" class="wiki-link">한국토지주택공사 (LH)</a></li>
+        <li><a href="#" class="wiki-link">행복주택</a></li>
+        <li><a href="#" class="wiki-link">청년전세임대주택</a></li>
+        <li><a href="#" class="wiki-link">주거급여</a></li>
+    </ul>
+
+    <div class="wiki-footer">
+        이 문서는 2025년 기준 LH 및 관련 기관의 공고를 바탕으로 재구성된 정보입니다. 정확한 정보는 반드시 공식 모집 공고문을 확인하시기 바랍니다.<br>
+        [1] 한국토지주택공사 청약플러스<br>
+        [2] 경기주택도시공사(GH) 청약센터
+    </div>
+
+</div>
+
+</body>
+</html>
