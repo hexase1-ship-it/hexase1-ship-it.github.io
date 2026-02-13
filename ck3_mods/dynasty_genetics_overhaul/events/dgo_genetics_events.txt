@@ -1,0 +1,176 @@
+namespace = dgo
+
+# Dynasty Genetics Overhaul
+# Birth hook event: boosts inheritance chance for congenital traits.
+character_event = {
+    id = dgo.0001
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        # Positive congenital traits
+        if = {
+            limit = {
+                NOT = { has_trait = genius }
+                OR = {
+                    father = { has_trait = genius }
+                    mother = { has_trait = genius }
+                }
+            }
+            random = {
+                chance = 45
+                add_trait = genius
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = intelligent }
+                NOT = { has_trait = genius }
+                OR = {
+                    father = { has_trait = intelligent }
+                    mother = { has_trait = intelligent }
+                }
+            }
+            random = {
+                chance = 55
+                add_trait = intelligent
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = quick }
+                NOT = { has_trait = intelligent }
+                NOT = { has_trait = genius }
+                OR = {
+                    father = { has_trait = quick }
+                    mother = { has_trait = quick }
+                }
+            }
+            random = {
+                chance = 65
+                add_trait = quick
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = beautiful }
+                OR = {
+                    father = { has_trait = beautiful }
+                    mother = { has_trait = beautiful }
+                }
+            }
+            random = {
+                chance = 45
+                add_trait = beautiful
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = comely }
+                NOT = { has_trait = beautiful }
+                OR = {
+                    father = { has_trait = comely }
+                    mother = { has_trait = comely }
+                }
+            }
+            random = {
+                chance = 55
+                add_trait = comely
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = handsome }
+                NOT = { has_trait = comely }
+                NOT = { has_trait = beautiful }
+                OR = {
+                    father = { has_trait = handsome }
+                    mother = { has_trait = handsome }
+                }
+            }
+            random = {
+                chance = 65
+                add_trait = handsome
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = hale }
+                OR = {
+                    father = { has_trait = hale }
+                    mother = { has_trait = hale }
+                }
+            }
+            random = {
+                chance = 45
+                add_trait = hale
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = robust }
+                NOT = { has_trait = hale }
+                OR = {
+                    father = { has_trait = robust }
+                    mother = { has_trait = robust }
+                }
+            }
+            random = {
+                chance = 55
+                add_trait = robust
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = amazonian }
+                NOT = { has_trait = robust }
+                NOT = { has_trait = hale }
+                OR = {
+                    father = { has_trait = amazonian }
+                    mother = { has_trait = amazonian }
+                }
+            }
+            random = {
+                chance = 65
+                add_trait = amazonian
+            }
+        }
+
+        # Negative congenital traits (slightly reduced inheritance chance)
+        if = {
+            limit = {
+                NOT = { has_trait = inbred }
+                OR = {
+                    father = { has_trait = inbred }
+                    mother = { has_trait = inbred }
+                }
+            }
+            random = {
+                chance = 20
+                add_trait = inbred
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = { has_trait = weak }
+                OR = {
+                    father = { has_trait = weak }
+                    mother = { has_trait = weak }
+                }
+            }
+            random = {
+                chance = 25
+                add_trait = weak
+            }
+        }
+    }
+}

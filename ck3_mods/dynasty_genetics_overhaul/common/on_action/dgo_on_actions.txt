@@ -1,0 +1,5 @@
+on_birth_child = {
+    events = {
+        dgo.0001
+    }
+}
