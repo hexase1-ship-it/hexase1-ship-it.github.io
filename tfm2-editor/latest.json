@@ -1,0 +1,13 @@
+﻿{
+    "version":  "0.1.0",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.0.exe",
+    "sha256":  "9d0053c10731a376d94a1c18799cffa0c8dcbb22705ca7ef5bf7c886f4f574a0",
+    "notes":  "",
+    "mandatory":  false,
+    "installer_args":  [
+                           "/SILENT",
+                           "/SP-",
+                           "/CLOSEAPPLICATIONS",
+                           "/RESTARTAPPLICATIONS"
+                       ]
+}
