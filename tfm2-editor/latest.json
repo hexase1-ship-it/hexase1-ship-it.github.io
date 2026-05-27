@@ -1,7 +1,7 @@
 ﻿{
     "version":  "0.1.0",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.0.exe",
-    "sha256":  "195c9c33301b6a7e61afd6da6bbce62c7b7ddc6afcc1b56a8193fce48573d180",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.0.exe?sha256=41b2911951e0dc55a586af2270c8dad1ab9f40734578b66fb4064c40ce1155e1",
+    "sha256":  "41b2911951e0dc55a586af2270c8dad1ab9f40734578b66fb4064c40ce1155e1",
     "notes":  "",
     "mandatory":  false,
     "installer_args":  [
