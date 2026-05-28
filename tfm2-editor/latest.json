@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.1.6",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.6.exe?sha256=c4b7c775b5f0f74075c964942ea4b3909ebda8974241de443e215f1fb8ddef36",
-    "sha256":  "c4b7c775b5f0f74075c964942ea4b3909ebda8974241de443e215f1fb8ddef36",
-    "notes":  "팀 탭의 총 잔고/영입 예산/급료 예산 저장을 실제 Team 예산 필드로 수정했습니다. FI03 뉴스 스냅샷이 아니라 모든 팀의 실제 예산 f64 필드를 읽고 씁니다.",
+    "version":  "0.1.7",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.7.exe?sha256=937eaee4199aad118ffdd389b9b6f508cbef590cc2029445281af5bc97caf4bc",
+    "sha256":  "937eaee4199aad118ffdd389b9b6f508cbef590cc2029445281af5bc97caf4bc",
+    "notes":  "코치 직책을 실제 Staff.role 필드(base+308 u32)에서 읽고 쓰도록 수정했습니다. 코치 목록에 직책 열을 추가했고, 목록 헤더 클릭 시 오름차순/내림차순 정렬할 수 있습니다.",
     "mandatory":  false,
     "installer_args":  [
                            "/SILENT",
