@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.1.5",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.5.exe?sha256=493794daaa68fe91d8acb7bf2f84d50576c7e6775c4fef114608750255b185d7",
-    "sha256":  "493794daaa68fe91d8acb7bf2f84d50576c7e6775c4fef114608750255b185d7",
-    "notes":  "",
+    "version":  "0.1.6",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.6.exe?sha256=c4b7c775b5f0f74075c964942ea4b3909ebda8974241de443e215f1fb8ddef36",
+    "sha256":  "c4b7c775b5f0f74075c964942ea4b3909ebda8974241de443e215f1fb8ddef36",
+    "notes":  "팀 탭의 총 잔고/영입 예산/급료 예산 저장을 실제 Team 예산 필드로 수정했습니다. FI03 뉴스 스냅샷이 아니라 모든 팀의 실제 예산 f64 필드를 읽고 씁니다.",
     "mandatory":  false,
     "installer_args":  [
                            "/SILENT",
