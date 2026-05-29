@@ -1,8 +1,8 @@
 {
-    "version":  "0.1.14",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.14.exe?sha256=3a002c95efaa6c923b350430d98d5517116f683403ac4b6e7b9154fd329df2e9",
-    "sha256":  "3a002c95efaa6c923b350430d98d5517116f683403ac4b6e7b9154fd329df2e9",
-    "notes":  "업데이트 다운로드 인증서 검증을 certifi 기반으로 보강했고, 설치가 조용히 실패하는지 확인하기 쉽도록 업데이트 설치를 마법사 화면으로 실행하게 바꿨습니다.",
+    "version":  "0.1.15",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.15.exe?sha256=bbe44e123116260cdb49ca21a3a354998168222be42d40e86172cfba226aecea",
+    "sha256":  "bbe44e123116260cdb49ca21a3a354998168222be42d40e86172cfba226aecea",
+    "notes":  "0.4.6 세이브에서 코치 직책 저장 위치가 1바이트 밀린 레이아웃을 감지하도록 수정했습니다. 기존에는 직책 0 코치만 보이고 분석/스카우트/기타 코치가 누락될 수 있었습니다.",
     "mandatory":  false,
     "installer_args":  [
                            "/SP-"
