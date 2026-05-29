@@ -1,11 +1,11 @@
 {
-  "version": "0.1.15",
-  "url": "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.15.exe?sha256=cf6c18f86e598b9244a267714880ba9dbffd07374fd35be5124301e249fbbb6d",
-  "sha256": "cf6c18f86e598b9244a267714880ba9dbffd07374fd35be5124301e249fbbb6d",
-  "notes": "0.4.6 세이브에서 코치 직책 저장 위치가 1바이트 밀린 레이아웃을 감지하도록 수정했습니다. 기존에는 직책 0 코치만 보이고 분석/스카우트/기타 코치가 누락될 수 있었습니다. 업데이트 설치 시 기존 실행 중인 에디터를 닫도록 설치 옵션도 보강했습니다.",
-  "mandatory": false,
-  "installer_args": [
-    "/SP-",
-    "/CLOSEAPPLICATIONS"
-  ]
+    "version":  "0.1.16",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.16.exe?sha256=5c402e6818a9da8708eb3f04d444c795572c1a148ee6c4dc0f1d779290f0e4da",
+    "sha256":  "5c402e6818a9da8708eb3f04d444c795572c1a148ee6c4dc0f1d779290f0e4da",
+    "notes":  "0.4.6 세이브에서 코치 직책 저장 위치가 1바이트 밀린 레이아웃을 감지하도록 수정했습니다. 기존에는 직책 0 코치만 보이고 분석/스카우트/기타 코치가 누락될 수 있었습니다. 업데이트 설치 시 기존 실행 중인 에디터를 닫도록 설치 옵션도 보강했습니다.",
+    "mandatory":  false,
+    "installer_args":  [
+                           "/SP-",
+                           "/CLOSEAPPLICATIONS"
+                       ]
 }
