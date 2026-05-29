@@ -1,8 +1,8 @@
 {
-    "version":  "0.1.10",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.10.exe?sha256=e777a4a4326dff1427f9d456360fcb3c67bc0f93ecb7f391d81ec99e0ba25d5c",
-    "sha256":  "e777a4a4326dff1427f9d456360fcb3c67bc0f93ecb7f391d81ec99e0ba25d5c",
-    "notes":  "선수 나이가 0/2/5살로 잘못 표시되거나 일부 선수 나이 저장이 다른 위치에 적용되던 문제를 수정했습니다. 가변 나이 필드와 정렬이 깨진 오래된 세이브도 더 안정적으로 탐지합니다.",
+    "version":  "0.1.11",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.11.exe?sha256=05a6bcd49eaa602ed7d57c526391c2602cb1d2a9768b2a6e8783240dc3491aa4",
+    "sha256":  "05a6bcd49eaa602ed7d57c526391c2602cb1d2a9768b2a6e8783240dc3491aa4",
+    "notes":  "커리어 설정 탭을 추가했습니다. 피어리스/하드 피어리스, 밴픽 제한시간, 시뮬레이션 강도, 난이도, 리그/컵/그룹 규칙, 패치 주기/강도, 스탯 표시, 첫 이적 시장, 챔피언 풀/추가 수를 세이브 편집기에서 수정할 수 있습니다.",
     "mandatory":  false,
     "installer_args":  [
                            "/SILENT",
