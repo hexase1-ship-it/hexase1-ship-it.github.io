@@ -1,8 +1,8 @@
 {
-    "version":  "0.1.12",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.12.exe?sha256=eddf5a8720cbfb4f98d41f3ddb030a3f379b8ec64ba4672b1fc9b6b2c32ec4d9",
-    "sha256":  "eddf5a8720cbfb4f98d41f3ddb030a3f379b8ec64ba4672b1fc9b6b2c32ec4d9",
-    "notes":  "커리어 설정 탭의 표시값 미스매치를 수정했습니다. 난이도 어려움, 첫 이적 시장 건너뛰기, 능력치 표시 항목이 실제 세이브 값과 일치하도록 저장값 매핑을 바로잡았습니다.",
+    "version":  "0.1.13",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.13.exe?sha256=e0c7ef7041864d36395ec0e06592cba1540f439269c68a64031f03730799d219",
+    "sha256":  "e0c7ef7041864d36395ec0e06592cba1540f439269c68a64031f03730799d219",
+    "notes":  "커리어 설정 탭의 저장값 매핑을 최신 세이브 기준으로 다시 맞췄습니다. 패치 주기/강도, 챔피언 풀, 리그 방식, 컵 방식, 그룹 스테이지 표시와 저장이 실제 게임 설정과 일치하도록 수정했습니다.",
     "mandatory":  false,
     "installer_args":  [
                            "/SILENT",
