@@ -1,8 +1,8 @@
 {
-    "version":  "0.1.23",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.23.exe?sha256=cd7765cdc5279732c60a899255f06584a47e69b40ba0f38fb4e87a60b02056f3",
-    "sha256":  "cd7765cdc5279732c60a899255f06584a47e69b40ba0f38fb4e87a60b02056f3",
-    "notes":  "TFM2 0.4.7 대응: 실제 팬 수 감지 보강, 최신 세이브/커스텀 DB 로드·저장 검증.",
+    "version":  "0.1.24",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.24.exe?sha256=4b5691e968313e069512f33782c9370dedaf300fa8c15c6deac9483b4a33ee84",
+    "sha256":  "4b5691e968313e069512f33782c9370dedaf300fa8c15c6deac9483b4a33ee84",
+    "notes":  "",
     "mandatory":  false,
     "installer_args":  [
                            "/SP-",
