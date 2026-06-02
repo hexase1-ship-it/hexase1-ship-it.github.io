@@ -1,8 +1,8 @@
 {
-    "version":  "0.1.22",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.22.exe?sha256=f38c7d3b4ad664f655247fc843ac11795e914bad84aec7545489d59e19abf640",
-    "sha256":  "f38c7d3b4ad664f655247fc843ac11795e914bad84aec7545489d59e19abf640",
-    "notes":  "세이브 불러오기와 저장하기를 백그라운드 작업으로 바꿔 응답 없음 체감을 줄였습니다. 저장 성공 후 전체 재로드를 제거하고, 업데이트 설치기는 현재 앱이 완전히 종료된 뒤 실행되도록 바꿔 Access Denied 가능성을 줄였습니다.",
+    "version":  "0.1.23",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.23.exe?sha256=cd7765cdc5279732c60a899255f06584a47e69b40ba0f38fb4e87a60b02056f3",
+    "sha256":  "cd7765cdc5279732c60a899255f06584a47e69b40ba0f38fb4e87a60b02056f3",
+    "notes":  "TFM2 0.4.7 대응: 실제 팬 수 감지 보강, 최신 세이브/커스텀 DB 로드·저장 검증.",
     "mandatory":  false,
     "installer_args":  [
                            "/SP-",
