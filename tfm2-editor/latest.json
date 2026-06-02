@@ -1,8 +1,8 @@
 {
-    "version":  "0.1.19",
-    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.19.exe?sha256=30d86455e7bf85a9544e8f21fa07e8940ed584ff2266a1f59122424194cbd086",
-    "sha256":  "30d86455e7bf85a9544e8f21fa07e8940ed584ff2266a1f59122424194cbd086",
-    "notes":  "솔랭 점수 표시를 커리어 세이브 기준으로 정상화하고, 실제 팬 수가 모든 선수 목록에 일관되게 보이도록 보정했습니다. 오른쪽 편집 패널 여백을 줄이고 프로그램 시작 시 창이 최대화되도록 수정했습니다.",
+    "version":  "0.1.21",
+    "url":  "https://raw.githubusercontent.com/hexase1-ship-it/hexase1-ship-it.github.io/refs/heads/main/tfm2-editor/TFM2CareerSaveEditorSetup-0.1.21.exe?sha256=cd9baf8b7dfff90795bee686829a5ce28aee7fd5a7a067dc410a38b8ee57f983",
+    "sha256":  "cd9baf8b7dfff90795bee686829a5ce28aee7fd5a7a067dc410a38b8ee57f983",
+    "notes":  "세이브 불러오기와 저장하기를 백그라운드 작업으로 바꿔 응답 없음 체감을 줄였습니다. 저장 성공 후 전체 재로드를 제거하고, 작업 중 중복 불러오기/저장을 막아 안정성을 높였습니다.",
     "mandatory":  false,
     "installer_args":  [
                            "/SP-",
